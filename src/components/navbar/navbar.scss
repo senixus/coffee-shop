@@ -1,0 +1,243 @@
+@import "../../style/variables";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  align-items: center;
+
+  &-logo {
+    &__item {
+      text-decoration: none;
+      color: $primary-color-white;
+      img {
+        width: 100px;
+        height: 75px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &-nav {
+    display: flex;
+    list-style-type: none;
+    &__item {
+      margin-left: 2.2rem;
+
+      &:nth-child(4) {
+        position: relative;
+        .navbar-nav__link:hover::after {
+          width: 0;
+        }
+
+        &:hover .dropdown {
+          display: block;
+        }
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      color: $primary-color-white;
+      font-size: 1.17rem;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: $primary-color-white;
+        transition: width 0.3s;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.bar {
+  display: none;
+  color: $primary-color-white;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.basket-count {
+  position: absolute;
+  bottom: 50%;
+}
+
+.dropdown {
+  background-color: $primary-color-black;
+  color: $primary-color-white;
+  width: 325px;
+  position: absolute;
+  right: 50%;
+  display: none;
+  z-index: 10;
+  animation: dropdownEntry 0.5s ease-out;
+
+  &-info {
+    padding: 1.5rem;
+
+    &__btn {
+      clear: both;
+      content: "";
+      display: table;
+
+      .view-btn {
+        width: 100%;
+        font-size: 0.8rem;
+        background-color: $primary-color-brown;
+        color: $primary-color-white;
+        padding: 0.8rem 3.2rem;
+        outline: none;
+        border: 1px solid $primary-color-brown;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: all 0.3s;
+        font-weight: bolder;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        letter-spacing: 1px;
+
+        &:hover {
+          background-color: $primary-color-white;
+          color: $primary-color-black;
+        }
+      }
+    }
+
+    .total-price {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &-child {
+    &__items {
+      display: flex;
+      margin: 0.5rem 0;
+    }
+
+    &__img {
+      img {
+        width: 100px;
+      }
+    }
+
+    &__list {
+      list-style-type: none;
+      margin: 0;
+      padding-left: 0.8rem;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+.shrink-navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  align-items: center;
+  background-color: $primary-color-black;
+  color: $primary-color-white;
+  z-index: 5;
+  animation: shrinkAnimation 0.4s linear;
+}
+
+@keyframes shrinkAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.profile {
+  position: relative;
+
+  &:hover .profile-dropdown {
+    display: block;
+  }
+
+  &-dropdown {
+    position: absolute;
+    right: 50%;
+    background-color: $primary-color-black;
+    width: 125px;
+    height: auto;
+    margin: 0;
+    padding: 1.5rem 1rem;
+    list-style-type: none;
+    display: none;
+
+    li {
+      margin: 0.5rem 0;
+      a {
+        text-decoration: none;
+        color: $primary-color-white;
+        font-size: 1.1rem;
+        &:hover {
+          text-decoration: underline;
+        }
+
+        .icon {
+          font-size: 1.1rem;
+          vertical-align: middle;
+          padding-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    &-logo {
+      &__item {
+        font-size: 3rem;
+      }
+    }
+
+    &-nav__item {
+      display: none;
+    }
+  }
+  .bar {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar {
+    &-logo {
+      &__item {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+@keyframes dropdownEntry {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

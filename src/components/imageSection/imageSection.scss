@@ -1,0 +1,42 @@
+@import "../../style/variables";
+
+section {
+  .title-section {
+    margin: 4rem 0;
+    width: 100%;
+    text-align: center;
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-weight: 300;
+      width: 35%;
+      font-size: 1.2rem;
+      margin: 1rem auto;
+    }
+  }
+
+  .coffee-section {
+    &__child {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__group {
+      margin-left: 1rem;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      p,
+      h3 {
+        text-align: center;
+      }
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

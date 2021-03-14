@@ -1,0 +1,15 @@
+.search {
+  &-bar {
+    padding: 0.8rem 1.5rem;
+    width: 100%;
+    outline: none;
+    border: 1px solid #dddddd;
+    text-align: center;
+    &::placeholder {
+      text-transform: uppercase;
+    }
+    &:focus {
+      text-align: left;
+    }
+  }
+}

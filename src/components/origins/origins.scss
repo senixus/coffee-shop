@@ -1,0 +1,21 @@
+@import "../../style/variables";
+
+.origins {
+  h2 {
+    font-size: 2.7rem;
+  }
+  &-list {
+    list-style-type: none;
+
+    padding: 0;
+
+    &__item {
+      margin: 1rem 0;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary-color-brown;
+      }
+    }
+  }
+}

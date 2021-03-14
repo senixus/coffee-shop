@@ -1,0 +1,26 @@
+@import "../../style/variables";
+
+.pagination-list {
+  display: flex;
+  list-style-type: none;
+  margin-left: 10rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  &__item {
+    margin-right: 0.5rem;
+  }
+  &__btn {
+    font-size: 1.1rem;
+    background-color: $primary-color-brown;
+    color: $primary-color-white;
+    outline: none;
+    border: 1px solid $primary-color-brown;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.4rem 1.5rem;
+
+    &:hover {
+      background-color: $primary-color-brown;
+    }
+  }
+}

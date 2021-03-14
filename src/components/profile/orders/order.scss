@@ -1,0 +1,83 @@
+@import "../../../style/variables";
+
+.orders {
+  border-collapse: collapse;
+
+  tr,
+  td,
+  th {
+    text-align: center;
+    border: 1px solid $primary-color-white;
+
+    padding: 1rem;
+    letter-spacing: 2px;
+  }
+
+  th {
+    font-size: 1.3rem;
+    color: $primary-color-gray;
+  }
+
+  tbody tr {
+    &:hover {
+      background-color: $primary-color-brown;
+    }
+  }
+  td {
+    color: $primary-color-white;
+  }
+
+  .table-btn {
+    @include buttons(
+      transparent,
+      $primary-color-white,
+      1px solid $primary-color-white,
+      0.5rem 2rem
+    );
+    text-decoration: none;
+
+    &:hover {
+      background-color: transparent;
+      color: $primary-color-white;
+    }
+  }
+}
+
+.order-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  color: $primary-color-white;
+  padding: 0;
+  width: 100%;
+
+  &__item {
+    width: 200px;
+    text-align: center;
+  }
+}
+
+.border {
+  border: 2px solid $primary-color-white;
+  margin-top: 1.5rem;
+}
+
+.order-info {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: space-between;
+  color: $primary-color-white;
+
+  li {
+    width: 200px;
+    text-align: center;
+  }
+}
+
+.titles {
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-bottom: 4px solid $primary-color-white;
+  padding-bottom: 1rem;
+}

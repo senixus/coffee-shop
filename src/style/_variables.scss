@@ -1,0 +1,17 @@
+$primary-color-white: #ffffff;
+$primary-color-brown: #be9c79;
+$primary-color-black: #181818;
+$primary-color-gray: #f2f2f2;
+
+@mixin buttons($background, $color, $border, $padding) {
+  outline: none;
+  border: $border;
+  padding: $padding;
+  color: $color;
+  background-color: $background;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}

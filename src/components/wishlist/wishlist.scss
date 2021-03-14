@@ -1,0 +1,16 @@
+.wishlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 4rem 0;
+
+  &-child {
+    margin: 0.5rem 0.5rem;
+    text-align: center;
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+}
