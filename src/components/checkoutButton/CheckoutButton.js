@@ -5,6 +5,7 @@ import { saveUserOrders } from "../../redux/actions/orders/saveUserOrders";
 import { format } from "date-fns";
 import toast, { Toaster } from "react-hot-toast";
 import { clearCart } from "../../redux/actions/cart/removeFromCart";
+import { Link } from "react-router-dom";
 
 const CheckoutButton = () => {
   const publishableKey =
@@ -30,25 +31,24 @@ const CheckoutButton = () => {
 
   return (
     <>
-      <Toaster
-        toastOptions={{
-          className: "",
-          style: {
-            fontSize: "1.2rem",
-          },
-        }}
-      />
-      <StripeCheckout
-        label="Pay Now"
-        name="Coffee Shop"
-        billingAddress
-        shippingAddress
-        description={`Your total is $ ${total.toFixed(2)}`}
-        amount={totalAmount}
-        panelLabel="Pay Now"
-        token={onToken}
-        stripeKey={publishableKey}
-      />
+      <Toaster />
+      {user ? (
+        <StripeCheckout
+          label="Pay Now"
+          name="Coffee Shop"
+          billingAddress
+          shippingAddress
+          description={`Your total is $ ${total.toFixed(2)}`}
+          amount={totalAmount}
+          panelLabel="Pay Now"
+          token={onToken}
+          stripeKey={publishableKey}
+        />
+      ) : (
+        <p style={{ fontSize: "1.2rem" }}>
+          You must <Link to="/login">login</Link> to checkout
+        </p>
+      )}
     </>
   );
 };

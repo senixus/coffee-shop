@@ -4,7 +4,6 @@ import "./products.scss";
 import { useDispatch, useSelector } from "react-redux";
 import Origins from "../origins/Origins";
 import Search from "../search/Search";
-import { Link } from "react-router-dom";
 import ProductHeader from "../productHeader/ProductHeader";
 import {
   selectSearchCoffee,

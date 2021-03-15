@@ -31,7 +31,6 @@ const Cart = () => {
                 <tr>
                   <th></th>
                   <th>Product</th>
-
                   <th>Quantity</th>
                   <th>Total</th>
                 </tr>
@@ -66,7 +65,7 @@ const Cart = () => {
                       &#10095;
                     </span>
                   </td>
-                  <td>$ {coffee.price.toFixed(2 || 0)}</td>
+                  <td>$ {coffee.price.toFixed(2)}</td>
                 </tr>
               </tbody>
             </table>
@@ -77,10 +76,15 @@ const Cart = () => {
             <tbody>
               <tr className="cart-subtotal">
                 <th>total</th>
-                <td>$ {total.toFixed(2 || 0)}</td>
+                <td>$ {total.toFixed(2)}</td>
               </tr>
             </tbody>
           </table>
+          <div style={{ color: "red", fontSize: "1.4rem" }}>
+            <h4>Test Card Number : </h4>
+            <p>4242 4242 4242 4242</p>
+            <p>10-22 | 123</p>
+          </div>
           <div className="cart-totals__checkout">
             <CheckoutButton />
           </div>

@@ -1,6 +1,5 @@
 import { createSelector } from "reselect";
 
-// Reducer
 export const selectCart = (state) => state.cart;
 
 export const selectCartTotalPrice = createSelector([selectCart], (cart) => {
