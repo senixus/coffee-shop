@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/mediaQuery";
 
 .origins {
   h2 {
@@ -18,4 +19,17 @@
       }
     }
   }
+}
+
+@include media-lg {
+}
+@include media-md {
+  .origins {
+    h2 {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+@include media-sm {
 }

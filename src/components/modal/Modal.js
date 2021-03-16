@@ -49,11 +49,7 @@ const Modal = ({ id, open, closeModal, coffee }) => {
               add to cart
             </button>
 
-            <button
-              className="modal-btn"
-              style={{ marginLeft: "1rem" }}
-              onClick={() => handleWishList(id)}
-            >
+            <button className="modal-btn" onClick={() => handleWishList(id)}>
               remove from wishlist
             </button>
           </div>

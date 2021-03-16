@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/mediaQuery";
 
 section {
   .title-section {
@@ -25,7 +26,7 @@ section {
     }
 
     &__group {
-      margin-left: 1rem;
+      margin: 0 1rem;
       img {
         max-width: 100%;
         height: auto;
@@ -36,6 +37,53 @@ section {
       }
       h3 {
         font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@include media-lg {
+  .title-section {
+    p {
+      width: 55% !important;
+    }
+  }
+}
+
+@include media-md {
+  .title-section {
+    p {
+      width: 75% !important;
+    }
+  }
+
+  .coffee-section {
+    &__child {
+      flex-wrap: wrap;
+    }
+
+    &__group {
+      text-align: center;
+
+      p {
+        width: 75%;
+        margin: 0 auto 1.8rem auto;
+      }
+    }
+  }
+}
+
+@include media-sm {
+  .title-section {
+    p {
+      width: 100% !important;
+    }
+  }
+
+  .coffee-section {
+    &__group {
+      p {
+        width: 100%;
       }
     }
   }

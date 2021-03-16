@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/mediaQuery";
 
 .filter-section {
   display: flex;
@@ -64,5 +65,55 @@
   &:hover {
     background-color: $primary-color-white;
     color: $primary-color-brown;
+  }
+}
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 65%;
+  margin: 5rem 0 3rem 0;
+}
+
+@include media-lg {
+  .products-section {
+    .products {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  .filter-section {
+    width: 75%;
+    padding: 0 1rem;
+
+    &__child {
+    }
+  }
+}
+@include media-md {
+}
+
+@include media-sm {
+  .products {
+    width: 100%;
+    &-child {
+      margin: 1.5rem 0 !important;
+    }
+  }
+  .origins {
+    display: none;
+  }
+  .filter-section {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    &__child {
+      width: 100%;
+      margin: 0.5rem 0;
+      text-align: center;
+    }
   }
 }

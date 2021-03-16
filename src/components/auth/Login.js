@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { loginAction } from "../../redux/actions/auth/login";
 import Navbar from "../navbar/Navbar";
-import { ReactComponent as Logo } from "../../assets/images/undraw_Login_re_4vu2 (1).svg";
 
 const Login = () => {
   const [user, setUser] = useState({ email: "", password: "" });
@@ -46,6 +45,7 @@ const Login = () => {
                   onChange={handleChange}
                   value={user.email}
                   required
+                  aria-label="email"
                 />
               </div>
               <div className="form-group">
@@ -61,6 +61,7 @@ const Login = () => {
                   onChange={handleChange}
                   value={user.password}
                   required
+                  aria-label="password"
                 />
               </div>
               <small style={{ color: "red" }}>{error}</small>
@@ -77,9 +78,6 @@ const Login = () => {
                   </Link>
                 </div>
               </div>
-            </div>
-            <div className="login-image">
-              <Logo />
             </div>
           </form>
         </div>

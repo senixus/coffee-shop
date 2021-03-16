@@ -1,10 +1,13 @@
 @import "../../style/variables";
+@import "../../style/animation";
+@import "../../style/mediaQuery";
 
 .navbar {
   display: flex;
   justify-content: space-between;
   padding: 0 2rem;
   align-items: center;
+  height: 100px;
 
   &-logo {
     &__item {
@@ -154,15 +157,7 @@
   color: $primary-color-white;
   z-index: 5;
   animation: shrinkAnimation 0.4s linear;
-}
-
-@keyframes shrinkAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  height: 160px;
 }
 
 .profile {
@@ -203,7 +198,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@include media-md {
   .navbar {
     &-logo {
       &__item {
@@ -220,24 +215,12 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@include media-sm {
   .navbar {
     &-logo {
       &__item {
         font-size: 2.5rem;
       }
     }
-  }
-}
-
-@keyframes dropdownEntry {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

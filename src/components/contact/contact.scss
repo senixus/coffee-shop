@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/mediaQuery";
 
 .contact {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -61,8 +62,49 @@
       border: 2px solid $primary-color-white;
       color: $primary-color-white;
       transition: all 0.3s;
+
       &:hover {
         background-color: $primary-color-black;
+      }
+    }
+  }
+}
+
+@include media-lg {
+  .contact {
+    &-form {
+      padding: 0 2rem;
+      width: 65%;
+
+      input,
+      textarea {
+        width: 92%;
+      }
+    }
+  }
+}
+
+@include media-md {
+  .contact {
+    &-form {
+      width: 80%;
+
+      input,
+      textarea {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@include media-sm {
+  .contact {
+    &-form {
+      width: 100%;
+
+      input,
+      textarea {
+        width: 90%;
       }
     }
   }

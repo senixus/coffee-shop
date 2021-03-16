@@ -71,13 +71,13 @@ const Products = () => {
       <Toaster />
       <main className="container">
         <div className="filter-section">
-          <div>
+          <div className="filter-section__child">
             <p>{currentCoffee.length} results</p>
           </div>
-          <div>
+          <div className="filter-section__child">
             <Search handleChange={handleChange} />
           </div>
-          <div>
+          <div className="filter-section__child">
             <Filter handleSelect={handleSelect} />
           </div>
         </div>

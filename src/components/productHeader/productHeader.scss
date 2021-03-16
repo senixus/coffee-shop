@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/mediaQuery";
 
 .product-header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -25,6 +26,22 @@
       text-transform: uppercase;
       font-weight: lighter;
       color: $primary-color-white;
+    }
+  }
+}
+
+@include media-md {
+  .product-header {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}
+
+@include media-sm {
+  .product-header {
+    h1 {
+      font-size: 3rem;
     }
   }
 }

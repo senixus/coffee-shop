@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { registerAction } from "../../redux/actions/auth/register";
 import Navbar from "../navbar/Navbar";
-import { ReactComponent as Logo } from "../../assets/images/undraw_Login_re_4vu2 (1).svg";
 
 const Register = () => {
   const [user, setUser] = useState({ email: "", password: "", username: "" });
@@ -45,6 +44,8 @@ const Register = () => {
                   className="form-group__control"
                   onChange={handleChange}
                   value={user.username}
+                  required
+                  aria-label="username"
                 />
               </div>
               <div className="form-group">
@@ -58,6 +59,8 @@ const Register = () => {
                   className="form-group__control"
                   onChange={handleChange}
                   value={user.email}
+                  required
+                  aria-label="email"
                 />
               </div>
               <div className="form-group">
@@ -71,6 +74,8 @@ const Register = () => {
                   className="form-group__control"
                   onChange={handleChange}
                   value={user.password}
+                  required
+                  aria-label="password"
                 />
               </div>
               <small style={{ color: "red" }}>{error}</small>
@@ -87,9 +92,6 @@ const Register = () => {
                   </Link>
                 </div>
               </div>
-            </div>
-            <div className="login-image">
-              <Logo />
             </div>
           </form>
         </div>

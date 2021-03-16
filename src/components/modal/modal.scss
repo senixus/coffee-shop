@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/mediaQuery";
 
 .modal {
   position: fixed;
@@ -53,10 +54,88 @@
     1px solid $primary-color-brown,
     0.7rem 1rem
   );
+  margin: 0 0.5rem;
 
   &:hover {
     background-color: $primary-color-white;
     border: 1px solid $primary-color-brown;
     color: $primary-color-brown;
+  }
+}
+
+@include media-lg {
+  .modal {
+    width: 90%;
+
+    .details-child {
+      padding: 0.4rem 0 !important;
+
+      &__img {
+        display: flex;
+        align-items: center;
+
+        img {
+          margin: 0 0.5rem !important;
+          width: 350px;
+        }
+      }
+
+      .details-info {
+        margin-top: 0.8rem;
+        &__title {
+          font-size: 1.7rem;
+        }
+        &__text {
+          width: 100%;
+        }
+      }
+    }
+
+    &-btn {
+      font-size: 0.8rem;
+      margin: 0.5rem 0.5rem !important;
+    }
+  }
+}
+
+@include media-md {
+  .modal {
+    .details-child {
+      display: flex;
+      flex-direction: column;
+      padding: 0.3rem !important;
+      align-items: center;
+      padding: 1rem 0;
+      &__img {
+        img {
+          margin: 0 !important;
+          width: 250px;
+        }
+      }
+
+      .details-info {
+        text-align: center;
+        margin-top: 0.8rem;
+        &__title {
+          font-size: 1.3rem;
+        }
+        &__text {
+          width: 100%;
+          font-size: 0.9rem;
+          padding: 0 0.3rem;
+        }
+      }
+    }
+  }
+}
+@include media-sm {
+  .modal {
+    .details-child {
+      &__img {
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 }

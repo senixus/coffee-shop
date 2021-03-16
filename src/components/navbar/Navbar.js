@@ -4,7 +4,6 @@ import { FaBars, FaShoppingCart } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
-import { FaUser } from "react-icons/fa";
 import { FiLogOut, FiList } from "react-icons/fi";
 import { currentUserAction } from "../../redux/actions/auth/currentUser";
 import { logoutAction } from "../../redux/actions/auth/logout";
@@ -123,18 +122,10 @@ const Navbar = () => {
           ) : (
             <>
               <li className="navbar-nav__item profile">
-                <Link to="/profile" className="navbar-nav__link">
-                  Profile
+                <Link to="/" className="navbar-nav__link">
+                  {user.displayName}
                 </Link>
                 <ul className="profile-dropdown">
-                  <li>
-                    <Link to="/profile">
-                      <span className="icon">
-                        <FaUser />
-                      </span>
-                      Profile
-                    </Link>
-                  </li>
                   <li>
                     <Link to="/wishlist">
                       <span className="icon">

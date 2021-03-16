@@ -8,8 +8,7 @@ import { clearCart } from "../../redux/actions/cart/removeFromCart";
 import { Link } from "react-router-dom";
 
 const CheckoutButton = () => {
-  const publishableKey =
-    "pk_test_51IAyzOGfCP0Fsyu4L2CRNv4iBDrkk41TgXWHVRhViEanoWjEKuwO9KgiR03aPrGC5VfgT5COjUBSZ46t00AY9FWz00QAq3etm6";
+  const publishableKey = "TEST KEY";
   const total = useSelector((state) => selectCartTotalPrice(state.cart));
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.user);
