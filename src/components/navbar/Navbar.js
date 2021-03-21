@@ -21,25 +21,39 @@ const Navbar = () => {
   const getCurrentUser = () => dispatch(currentUserAction());
   const logout = () => dispatch(logoutAction());
   const [isOpen, setIsOpen] = useState(false);
+  const [isNav, setIsNav] = useState(false);
 
   useEffect(() => {
     getCurrentUser();
 
+    const handleScreenSize = (e) => {
+      if (e.target.innerWidth > 500) {
+        setIsNav(false);
+      }
+    };
+
     const handleScroll = () => {
-      if (window.scrollY >= 150) {
+      if (window.scrollY >= 150 && isNav === false) {
         setIsOpen(true);
       } else {
         setIsOpen(false);
       }
     };
-
+    window.addEventListener("resize", handleScreenSize);
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScreenSize);
+    };
   }, [isOpen]);
 
   return (
     <>
-      <nav className={isOpen ? `shrink-navbar` : `navbar`}>
+      <nav
+        className={`${isOpen ? `shrink-navbar` : ""} ${
+          isNav ? `mobile-menu` : "navbar"
+        } `}
+      >
         <div className="navbar-logo">
           <h1>
             <Link to="/" className="navbar-logo__item">
@@ -47,7 +61,7 @@ const Navbar = () => {
             </Link>
           </h1>
         </div>
-        <ul className="navbar-nav">
+        <ul className={isNav ? `mobile-menu__item` : `navbar-nav`}>
           <li className="navbar-nav__item">
             <Link to="/" className="navbar-nav__link">
               Home
@@ -64,8 +78,8 @@ const Navbar = () => {
             </Link>
           </li>
 
-          <li className="navbar-nav__item">
-            <Link to="/cart" className="navbar-nav__link">
+          <li className="navbar-nav__item cart">
+            <Link to="/cart" className="navbar-nav__link ">
               <FaShoppingCart />
               <span className="basket-count">{cart.length}</span>
             </Link>
@@ -147,8 +161,8 @@ const Navbar = () => {
             </>
           )}
 
-          <li className="bar">
-            <FaBars />
+          <li className="bar" onClick={() => setIsNav(() => !isNav)}>
+            {isNav ? <IoMdClose /> : <FaBars />}
           </li>
         </ul>
       </nav>

@@ -157,7 +157,7 @@
   color: $primary-color-white;
   z-index: 5;
   animation: shrinkAnimation 0.4s linear;
-  height: 160px;
+  height: 100px;
 }
 
 .profile {
@@ -194,6 +194,44 @@
           padding-right: 0.5rem;
         }
       }
+    }
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary-color-black;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  animation: mobileMenu 2.5s cubic-bezier(0.25, 1, 0.3, 1) both;
+  .mobile-menu__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      display: block;
+      margin: 0.4rem 0;
+    }
+    .cart:hover .dropdown {
+      display: none;
+    }
+    .bar {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
     }
   }
 }
