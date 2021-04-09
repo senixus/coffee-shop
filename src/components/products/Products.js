@@ -26,19 +26,25 @@ const Products = () => {
   const [search, setSearch] = useState("");
   const coffee = useSelector((state) => selectSearchCoffee(search)(state));
   const searchItem = (coffee) => dispatch(searchCoffee(coffee));
-  const [filter, setFilter] = useState("");
-  useSelector((state) => selectLowestPrice(filter)(state));
-  useSelector((state) => selectAlphabetic(filter)(state));
-  useSelector((state) => selectHighestPrice(filter)(state));
-  useSelector((state) => selectReverseAlphabetic(filter)(state));
+  const [filter, setFilter] = useState(null);
+  const lowest = useSelector((state) => selectLowestPrice(filter)(state));
+  const name = useSelector((state) => selectAlphabetic(filter)(state));
+  const highest = useSelector((state) => selectHighestPrice(filter)(state));
+  const reverse = useSelector((state) =>
+    selectReverseAlphabetic(filter)(state)
+  );
   const user = useSelector((state) => state.auth.user);
   const [currentPage, setCurrentPage] = useState(1);
   const addCart = (coffee) => dispatch(addToCart(coffee));
   const addWishList = (coffee, user) => dispatch(addToWishList(coffee, user));
 
+  const handleSelect = (e) => {
+    setFilter(e.target.value);
+  };
+
   useEffect(() => {
     getCoffee();
-  }, []);
+  }, [filter]);
 
   let currentCoffee = handlePagination(coffee, currentPage);
 
@@ -49,10 +55,6 @@ const Products = () => {
   const handleChange = (e) => {
     setSearch(e.target.value);
     searchItem(search);
-  };
-
-  const handleSelect = (e) => {
-    setFilter(e.target.value);
   };
 
   const handleCart = (coffee) => {
