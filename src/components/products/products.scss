@@ -72,7 +72,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   width: 65%;
   margin: 5rem 0 3rem 0;
 }
@@ -88,12 +87,17 @@
   .filter-section {
     width: 75%;
     padding: 0 1rem;
-
-    &__child {
-    }
   }
 }
 @include media-md {
+  .filter-section {
+    width: 95%;
+    padding: 0 1rem;
+
+    &__child {
+      margin: 0 0.5rem;
+    }
+  }
 }
 
 @include media-sm {

@@ -65,7 +65,8 @@
       transition: all 0.3s;
 
       &:hover {
-        background-color: $primary-color-black;
+        background-color: $primary-color-white;
+        color: $primary-color-black;
       }
     }
   }
