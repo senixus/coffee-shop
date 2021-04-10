@@ -4,7 +4,6 @@ import { originReducer } from "./originReducer/origins";
 import { cartReducer } from "./cartReducer/cart";
 import { authReducer } from "./authReducer/auth";
 import { wishListReducer } from "./wishListReducer/wishList";
-import { getOrdersReducer } from "./orderReducer/getOrders";
 import storage from "redux-persist/lib/storage";
 import { persistReducer } from "redux-persist";
 
@@ -20,7 +19,6 @@ const rootReducer = combineReducers({
   cart: cartReducer,
   auth: authReducer,
   wishList: wishListReducer,
-  orders: getOrdersReducer,
 });
 
 export default persistReducer(persistConfig, rootReducer);
