@@ -20,7 +20,6 @@ const Modal = ({ id, open, closeModal, coffee }) => {
 
   const handleWishList = (id) => {
     deleteItem(id);
-    toast.success("Removed from the wish list");
     closeModal();
   };
 

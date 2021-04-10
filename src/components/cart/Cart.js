@@ -75,12 +75,12 @@ const Cart = () => {
           <table>
             <tbody>
               <tr className="cart-subtotal">
-                <th>total</th>
+                <th>Total : </th>
                 <td>$ {total.toFixed(2)}</td>
               </tr>
             </tbody>
           </table>
-          <div style={{ color: "red", fontSize: "1.4rem" }}>
+          <div style={{ color: "red", fontSize: "1.3rem" }}>
             <h4>Test Card Number : </h4>
             <p>4242 4242 4242 4242</p>
             <p>10-22 | 123</p>

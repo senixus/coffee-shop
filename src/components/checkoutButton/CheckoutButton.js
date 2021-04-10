@@ -23,7 +23,7 @@ const CheckoutButton = () => {
   const onToken = (token) => {
     if (token) {
       saveOrder(cart, user.uid, orderTime, orderNo, total);
-      toast.success("Order Success!");
+      toast.success("Payment Success!");
       dispatch(clearCart());
     }
   };
@@ -45,7 +45,11 @@ const CheckoutButton = () => {
         />
       ) : (
         <p style={{ fontSize: "1.2rem" }}>
-          You must <Link to="/login">login</Link> to checkout
+          You must{" "}
+          <Link to="/login" style={{ color: "black" }}>
+            login
+          </Link>{" "}
+          to checkout
         </p>
       )}
     </>

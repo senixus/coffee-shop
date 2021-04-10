@@ -6,7 +6,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -45%);
-  width: 100%;
+  width: 95%;
+
   .details-child {
     margin: 3rem 0;
     display: flex;
@@ -30,9 +31,9 @@
     }
     .modal-close {
       position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      font-size: 1.5rem;
+      top: 0.5rem;
+      right: 0.5rem;
+      font-size: 1.2rem;
       cursor: pointer;
     }
   }

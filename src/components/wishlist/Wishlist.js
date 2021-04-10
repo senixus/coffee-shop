@@ -3,7 +3,6 @@ import ProductHeader from "../productHeader/ProductHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { getWishList } from "../../redux/actions/wishlist/getWishlist";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Modal from "../modal/Modal";
 
 const Wishlist = () => {
@@ -38,7 +37,7 @@ const Wishlist = () => {
           {wishList &&
             wishList.map((wish) => (
               <div key={wish.id} className="wishlist-child">
-                <Link onClick={() => openModal(wish.coffee, wish.id)}>
+                <button onClick={() => openModal(wish.coffee, wish.id)}>
                   <img
                     src={wish.coffee.coffeePic && wish.coffee.coffeePic.name}
                     width="250px"
@@ -49,7 +48,7 @@ const Wishlist = () => {
                     {wish.coffee.coffeeName}
                   </p>
                   <p className="wishlist-child__price">$ {wish.coffee.price}</p>
-                </Link>
+                </button>
               </div>
             ))}
         </div>

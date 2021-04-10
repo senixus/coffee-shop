@@ -14,9 +14,12 @@
         opacity: 0.8;
       }
     }
-    a {
+    button {
       color: #000;
-      text-decoration: none;
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      outline: none;
     }
   }
 }
