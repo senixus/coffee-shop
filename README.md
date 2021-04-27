@@ -1,6 +1,5 @@
 # Coffee Shop - PWA
 
-First time i used PWA
 
 ## Getting Started
 
