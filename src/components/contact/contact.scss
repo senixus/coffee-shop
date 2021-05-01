@@ -14,13 +14,14 @@
   &-content {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   &-form {
-    width: 30%;
+    width: 35%;
     &__group {
       margin: 1rem 0;
-      width: 100%;
+
       label {
         display: block;
         color: $primary-color-white;
@@ -32,8 +33,8 @@
 
       input,
       textarea {
-        width: 91%;
-        padding: 0.7rem 1.4rem;
+        width: 100%;
+        padding: 0.7rem 0.3rem;
         outline: none;
         background-color: transparent;
         border: 2px solid $primary-color-white;
@@ -49,24 +50,24 @@
       textarea {
         resize: vertical;
         height: 200px;
-        font-size: 1.5rem;
       }
-    }
 
-    button {
-      width: 100%;
-      padding: 0.5rem 3rem;
-      font-size: 1.4rem;
-      outline: none;
-      cursor: pointer;
-      background-color: transparent;
-      border: 2px solid $primary-color-white;
-      color: $primary-color-white;
-      transition: all 0.3s;
+      button {
+        width: 102%;
+        padding: 0.5rem 3rem;
+        font-size: 1.4rem;
+        outline: none;
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid $primary-color-white;
+        color: $primary-color-white;
+        transition: all 0.3s;
+        letter-spacing: 2px;
 
-      &:hover {
-        background-color: $primary-color-white;
-        color: $primary-color-black;
+        &:hover {
+          background-color: $primary-color-white;
+          color: $primary-color-black;
+        }
       }
     }
   }
@@ -77,10 +78,9 @@
     &-form {
       padding: 0 2rem;
       width: 65%;
-
       input,
       textarea {
-        width: 92%;
+        width: 100%;
       }
     }
   }
@@ -90,10 +90,9 @@
   .contact {
     &-form {
       width: 80%;
-
       input,
       textarea {
-        width: 90%;
+        width: 100%;
       }
     }
   }
@@ -102,11 +101,10 @@
 @include media-sm {
   .contact {
     &-form {
-      width: 100%;
-
+      width: 90%;
       input,
       textarea {
-        width: 90%;
+        width: 100%;
       }
     }
   }
