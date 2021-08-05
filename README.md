@@ -1,5 +1,12 @@
 # Coffee Shop - PWA
 
+## Technologies
+
+- Firebase (firestore, auth)
+- Redux
+- React Hooks
+- React router
+
 
 ## Getting Started
 
