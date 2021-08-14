@@ -15,9 +15,7 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <PersistGate persistor={persistor}>
-        <React.StrictMode>
-          <App />
-        </React.StrictMode>
+        <App />
       </PersistGate>
     </BrowserRouter>
   </Provider>,

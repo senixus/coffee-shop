@@ -6,7 +6,7 @@ import { clearCart } from "../../redux/actions/cart/removeFromCart";
 import { Link } from "react-router-dom";
 
 const CheckoutButton = () => {
-  const publishableKey = "TEST KEY";
+  const publishableKey = "KEY";
   const total = useSelector((state) => selectCartTotalPrice(state.cart));
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.user);

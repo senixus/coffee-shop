@@ -1,9 +1,9 @@
 import "./header.scss";
 import slide from "../../assets/images/slider-separator.png";
 import Navbar from "../navbar/Navbar";
-import { withRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Header = ({ history }) => {
+const Header = () => {
   return (
     <header className="background">
       <Navbar />
@@ -16,10 +16,10 @@ const Header = ({ history }) => {
           since the 1500s, when an unknown printer took a galley of type and
           scrambled.
         </p>
-        <Link onClick={() => history.push("/shop")}>shop here</Link>
+        <Link to="/shop">shop here</Link>
       </div>
     </header>
   );
 };
 
-export default withRouter(Header);
+export default Header;
