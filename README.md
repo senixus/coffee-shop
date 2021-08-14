@@ -8,6 +8,7 @@
 - React router
 - Redux thunk
 - Code Splitting
+- Docker
 
 
 ## Getting Started
