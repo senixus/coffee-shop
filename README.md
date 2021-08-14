@@ -6,6 +6,8 @@
 - Redux
 - React Hooks
 - React router
+- Redux thunk
+- Code Splitting
 
 
 ## Getting Started
