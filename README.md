@@ -1,14 +1,15 @@
-# Coffee Shop - PWA
+# Coffee Shop
 
 ## Technologies
 
-- Firebase (firestore, auth)
+- Hooks
 - Redux
-- React Hooks
-- React router
 - Redux thunk
+- React router
+- Firebase (firestore, auth)
 - Code Splitting
 - Docker
+- PWA
 
 
 ## Getting Started
