@@ -10,6 +10,7 @@
 - Code Splitting
 - Docker
 - PWA
+- Unit test (Jest)
 
 
 ## Getting Started
