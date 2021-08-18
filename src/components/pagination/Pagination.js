@@ -1,4 +1,5 @@
 import "./pagination.scss";
+import React from "react";
 
 const Pagination = ({ paginate, coffee }) => {
   const pageNumbers = [];
@@ -8,21 +9,19 @@ const Pagination = ({ paginate, coffee }) => {
   }
 
   return (
-    <>
-      <ul className="pagination-list">
-        {pageNumbers.map((number) => (
-          <li key={number} className="pagination-list__item">
-            <button
-              className="pagination-list__btn"
-              onClick={() => paginate(number)}
-              type="button"
-            >
-              {number}
-            </button>
-          </li>
-        ))}
-      </ul>
-    </>
+    <ul className="pagination-list">
+      {pageNumbers.map((number) => (
+        <li key={number} className="pagination-list__item">
+          <button
+            className="pagination-list__btn"
+            onClick={() => paginate(number)}
+            type="button"
+          >
+            {number}
+          </button>
+        </li>
+      ))}
+    </ul>
   );
 };
 

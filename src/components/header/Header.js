@@ -1,3 +1,4 @@
+import React from "react";
 import "./header.scss";
 import slide from "../../assets/images/slider-separator.png";
 import Navbar from "../navbar/Navbar";

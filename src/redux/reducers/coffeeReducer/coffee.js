@@ -13,7 +13,6 @@ export const coffeeReducer = (state = initialState, action) => {
         ...state,
         coffee: action.payload,
       };
-
     default:
       return state;
   }

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { getAllCoffee } from "../../redux/actions/coffee/getAllCoffee";
 import "./products.scss";
 import { useDispatch, useSelector } from "react-redux";
@@ -68,7 +68,7 @@ const Products = () => {
   };
 
   return (
-    <>
+    <React.Fragment>
       <ProductHeader title="Product List" />
       <Toaster />
       <main className="container">
@@ -132,7 +132,7 @@ const Products = () => {
 
         <Pagination coffee={coffee.length} paginate={paginate} />
       </main>
-    </>
+    </React.Fragment>
   );
 };
 

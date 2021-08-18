@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import toast, { Toaster } from "react-hot-toast";
 import { clearCart } from "../../redux/actions/cart/removeFromCart";
 import { Link } from "react-router-dom";
+import React from "react";
 
 const CheckoutButton = () => {
   const publishableKey = "KEY";
@@ -20,7 +21,7 @@ const CheckoutButton = () => {
   };
 
   return (
-    <>
+    <React.Fragment>
       <Toaster />
       {user ? (
         <StripeCheckout
@@ -43,7 +44,7 @@ const CheckoutButton = () => {
           to checkout
         </p>
       )}
-    </>
+    </React.Fragment>
   );
 };
 

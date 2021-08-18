@@ -1,8 +1,8 @@
+import React, { useEffect, useState } from "react";
 import "./wishlist.scss";
 import ProductHeader from "../productHeader/ProductHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { getWishList } from "../../redux/actions/wishlist/getWishlist";
-import { useEffect, useState } from "react";
 import Modal from "../modal/Modal";
 
 const Wishlist = () => {
@@ -29,7 +29,7 @@ const Wishlist = () => {
   };
 
   return (
-    <>
+    <React.Fragment>
       <ProductHeader title="Wish List" />
       <Modal id={id} open={isOpen} closeModal={closeModal} coffee={coffee} />
       <main className="wishlist container">
@@ -53,7 +53,7 @@ const Wishlist = () => {
             ))}
         </div>
       </main>
-    </>
+    </React.Fragment>
   );
 };
 

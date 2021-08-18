@@ -1,3 +1,4 @@
+import React from "react";
 import coffeeOne from "../../assets/images/coffee/1.jpg";
 import coffeeTwo from "../../assets/images/coffee/2.jpg";
 import coffeeThree from "../../assets/images/coffee/3.jpg";

@@ -1,3 +1,4 @@
+import React from "react";
 import "./coffeeProducts.scss";
 import slide from "../../assets/images/slider-separator.png";
 import { Link, withRouter } from "react-router-dom";
