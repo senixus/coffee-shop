@@ -1,3 +1,4 @@
+import React from "react";
 import ReactDOM from "react-dom";
 import "./modal.scss";
 import { AiOutlineClose } from "react-icons/ai";
@@ -24,7 +25,7 @@ const Modal = ({ id, open, closeModal, coffee }) => {
   };
 
   return ReactDOM.createPortal(
-    <>
+    <React.Fragment>
       <Toaster position="bottom-right" />
 
       <div className="overlay" onClick={closeModal}></div>
@@ -57,7 +58,7 @@ const Modal = ({ id, open, closeModal, coffee }) => {
           </div>
         </div>
       </div>
-    </>,
+    </React.Fragment>,
     document.getElementById("modal")
   );
 };

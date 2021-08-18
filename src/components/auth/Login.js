@@ -25,64 +25,62 @@ const Login = () => {
     setUser({ email: "", password: "" });
   };
   return (
-    <>
-      <main className="auth-form">
-        <Navbar />
+    <main className="auth-form">
+      <Navbar />
 
-        <div className="auth-form__child">
-          <form className="form" onSubmit={handleSubmit}>
-            <div className="form-div">
-              <h1 className="form-title">Login</h1>
-              <div className="form-group">
-                <div className="form-group__label">
-                  <label htmlFor="email">Email</label>
-                </div>
-                <input
-                  type="email"
-                  placeholder="Email"
-                  name="email"
-                  className="form-group__control"
-                  onChange={handleChange}
-                  value={user.email}
-                  required
-                  aria-label="email"
-                />
+      <div className="auth-form__child">
+        <form className="form" onSubmit={handleSubmit}>
+          <div className="form-div">
+            <h1 className="form-title">Login</h1>
+            <div className="form-group">
+              <div className="form-group__label">
+                <label htmlFor="email">Email</label>
               </div>
-              <div className="form-group">
-                <div className="form-group__label">
-                  <label htmlFor="password">Password</label>
-                </div>
-
-                <input
-                  type="password"
-                  placeholder="Password"
-                  name="password"
-                  className="form-group__control"
-                  onChange={handleChange}
-                  value={user.password}
-                  required
-                  aria-label="password"
-                />
-              </div>
-              <small style={{ color: "red" }}>{error}</small>
-              <div className="form-group">
-                <button type="submit" className="form-btn">
-                  Login
-                </button>
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                className="form-group__control"
+                onChange={handleChange}
+                value={user.email}
+                required
+                aria-label="email"
+              />
+            </div>
+            <div className="form-group">
+              <div className="form-group__label">
+                <label htmlFor="password">Password</label>
               </div>
 
-              <div className="form-group ">
-                <div className="form-group">
-                  <Link to="/register" className="register">
-                    Register
-                  </Link>
-                </div>
+              <input
+                type="password"
+                placeholder="Password"
+                name="password"
+                className="form-group__control"
+                onChange={handleChange}
+                value={user.password}
+                required
+                aria-label="password"
+              />
+            </div>
+            <small style={{ color: "red" }}>{error}</small>
+            <div className="form-group">
+              <button type="submit" className="form-btn">
+                Login
+              </button>
+            </div>
+
+            <div className="form-group ">
+              <div className="form-group">
+                <Link to="/register" className="register">
+                  Register
+                </Link>
               </div>
             </div>
-          </form>
-        </div>
-      </main>
-    </>
+          </div>
+        </form>
+      </div>
+    </main>
   );
 };
 

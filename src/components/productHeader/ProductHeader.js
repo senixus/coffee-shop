@@ -1,3 +1,4 @@
+import React from "react";
 import "./productHeader.scss";
 import Navbar from "../navbar/Navbar";
 

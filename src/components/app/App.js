@@ -1,5 +1,5 @@
 import { Route, Switch } from "react-router-dom";
-import { Suspense, lazy } from "react";
+import React, { Suspense, lazy } from "react";
 import PrivateRoute from "../privateRoute/PrivateRoute";
 import Spinner from "../spinner/Spinner";
 const Home = lazy(() => import("../../pages/Home"));
@@ -13,20 +13,18 @@ const Error = lazy(() => import("../error/Error"));
 
 function App() {
   return (
-    <div>
-      <Suspense fallback={<Spinner />}>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/shop" component={Shop} />
-          <Route path="/cart" component={CartPage} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/login" component={LoginPage} />
-          <Route path="/register" component={RegisterPage} />
-          <PrivateRoute path="/wishlist" component={WishListPage} />
-          <Route path="*" component={Error} />
-        </Switch>
-      </Suspense>
-    </div>
+    <Suspense fallback={<Spinner />}>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/shop" component={Shop} />
+        <Route path="/cart" component={CartPage} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/register" component={RegisterPage} />
+        <PrivateRoute path="/wishlist" component={WishListPage} />
+        <Route path="*" component={Error} />
+      </Switch>
+    </Suspense>
   );
 }
 
