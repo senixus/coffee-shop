@@ -3,7 +3,6 @@ import { loginAction } from "../../redux/actions/auth/login";
 import { logoutAction } from "../../redux/actions/auth/logout";
 import { registerAction } from "../../redux/actions/auth/register";
 import * as actionTypes from "../../redux/actions/actionTypes";
-import { MockFirebase } from "firebase-mock";
 import { mockStore } from "../../setupTests";
 
 // jest.fn(

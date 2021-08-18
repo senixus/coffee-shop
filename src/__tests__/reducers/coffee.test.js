@@ -1,24 +1,14 @@
 import { coffeeReducer } from "../../redux/reducers/coffeeReducer/coffee";
 import * as actionTypes from "../../redux/actions/actionTypes";
+import { initialState } from "../../redux/reducers/initialState";
 
 describe("coffee reducer", () => {
   it("should return initial state", () => {
-    const initialState = {
-      coffee: [],
-      origins: [],
-      getCurrentUser: {},
-      cart: [],
-      user: {},
-      wishList: [],
-      orders: [],
-      orderDetails: [],
-      error: "",
-    };
     expect(coffeeReducer(undefined, {})).toEqual(initialState);
   });
 
   it("should return all coffee", () => {
-    const initalState = {
+    const state = {
       coffee: [],
     };
     const action = {
@@ -28,7 +18,7 @@ describe("coffee reducer", () => {
         { id: 2, name: "Brazil Alfenas Dulce" },
       ],
     };
-    expect(coffeeReducer(initalState, action)).toEqual({
+    expect(coffeeReducer(state, action)).toEqual({
       coffee: [
         { id: 1, name: "Peru" },
         { id: 2, name: "Brazil Alfenas Dulce" },

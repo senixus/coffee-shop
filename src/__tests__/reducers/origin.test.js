@@ -1,24 +1,14 @@
 import { originReducer } from "../../redux/reducers/originReducer/origins";
 import * as actionTypes from "../../redux/actions/actionTypes";
+import { initialState } from "../../redux/reducers/initialState";
 
 describe("origin reducer", () => {
   it("should return initial state", () => {
-    const initialState = {
-      coffee: [],
-      origins: [],
-      getCurrentUser: {},
-      cart: [],
-      user: {},
-      wishList: [],
-      orders: [],
-      orderDetails: [],
-      error: "",
-    };
     expect(originReducer(undefined, {})).toEqual(initialState);
   });
 
   it("should return origins", () => {
-    const initialState = {
+    const state = {
       origins: [],
     };
     const action = {
@@ -35,7 +25,7 @@ describe("origin reducer", () => {
       ],
     };
 
-    expect(originReducer(initialState, action)).toEqual({
+    expect(originReducer(state, action)).toEqual({
       origins: [
         {
           id: 1,

@@ -1,7 +1,6 @@
 import { getOrigins } from "../../redux/actions/origins/getOrigins";
 import * as actionTypes from "../../redux/actions/actionTypes";
 import { mockStore } from "../../setupTests";
-// import { MockFirebase } from "firebase-mock";
 
 jest.mock("../../firebase/firebase.js", () => ({
   db: {

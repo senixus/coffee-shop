@@ -54,7 +54,6 @@
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.6.2",
-    "firebase-mock": "^2.3.2",
     "react-test-renderer": "^17.0.2",
     "redux-mock-store": "^1.5.4"
   }

@@ -1,23 +1,13 @@
 import { authReducer } from "../../redux/reducers/authReducer/auth";
 import * as actionTypes from "../../redux/actions/actionTypes";
+import { initialState } from "../../redux/reducers/initialState";
 
 describe("auth reducer", () => {
   it("should return initial state", () => {
-    const initialState = {
-      coffee: [],
-      origins: [],
-      getCurrentUser: {},
-      cart: [],
-      user: {},
-      wishList: [],
-      orders: [],
-      orderDetails: [],
-      error: "",
-    };
     expect(authReducer(undefined, {})).toEqual(initialState);
   });
   it("should return current user ", () => {
-    const initialState = {
+    const state = {
       user: {},
     };
     const action = {
@@ -28,7 +18,7 @@ describe("auth reducer", () => {
         displayName: "Test",
       },
     };
-    expect(authReducer(initialState, action)).toEqual({
+    expect(authReducer(state, action)).toEqual({
       user: {
         uid: 1,
         email: "test@test.com",
@@ -37,36 +27,36 @@ describe("auth reducer", () => {
     });
   });
   it("should return register ", () => {
-    const initialState = {
+    const state = {
       error: "",
     };
     const action = {
       type: actionTypes.REGISTER,
     };
-    expect(authReducer(initialState, action)).toEqual({
+    expect(authReducer(state, action)).toEqual({
       error: "",
     });
   });
   it("should return login ", () => {
-    const initialState = {
+    const state = {
       error: "",
     };
     const action = {
       type: actionTypes.LOGIN,
     };
-    expect(authReducer(initialState, action)).toEqual({
+    expect(authReducer(state, action)).toEqual({
       error: "",
     });
   });
   it("should return error message ", () => {
-    const initialState = {
+    const state = {
       error: "",
     };
     const action = {
       type: actionTypes.ERROR_MESSAGE,
       payload: "Something went wrong",
     };
-    expect(authReducer(initialState, action)).toEqual({
+    expect(authReducer(state, action)).toEqual({
       error: "Something went wrong",
     });
   });

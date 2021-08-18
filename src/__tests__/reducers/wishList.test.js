@@ -1,24 +1,14 @@
 import { wishListReducer } from "../../redux/reducers/wishListReducer/wishList";
 import * as actionTypes from "../../redux/actions/actionTypes";
+import { initialState } from "../../redux/reducers/initialState";
 
 describe("wishlist reducer", () => {
   it("should return initial state", () => {
-    const initialState = {
-      coffee: [],
-      origins: [],
-      getCurrentUser: {},
-      cart: [],
-      user: {},
-      wishList: [],
-      orders: [],
-      orderDetails: [],
-      error: "",
-    };
     expect(wishListReducer(undefined, {})).toEqual(initialState);
   });
 
   it("should return user wishlist", () => {
-    const initialState = {
+    const state = {
       wishList: [],
     };
     const action = {
@@ -28,7 +18,7 @@ describe("wishlist reducer", () => {
       },
     };
 
-    expect(wishListReducer(initialState, action)).toEqual({
+    expect(wishListReducer(state, action)).toEqual({
       wishList: [],
     });
   });
