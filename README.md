@@ -11,11 +11,12 @@
 - Docker
 - PWA
 - Unit test (Jest)
+- CI/CD (CircleCI)
 
 
 ## Getting Started
 
-Clone this project 
+Clone this project
 
 `npm install` to install all required depencies
 
