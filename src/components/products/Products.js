@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { getAllCoffee } from "../../redux/actions/coffee/getAllCoffee";
 import "./products.scss";
@@ -44,6 +45,7 @@ const Products = () => {
 
   useEffect(() => {
     getCoffee();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filter]);
 
   let currentCoffee = handlePagination(coffee, currentPage);

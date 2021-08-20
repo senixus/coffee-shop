@@ -16,6 +16,7 @@ const Wishlist = () => {
 
   useEffect(() => {
     getUserWishList(user.uid);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user.uid]);
 
   const openModal = (coffee, id) => {
