@@ -7,11 +7,10 @@ import { Link } from "react-router-dom";
 import React from "react";
 
 const CheckoutButton = () => {
-  const publishableKey = "KEY";
+  const publishableKey = process.env.REACT_APP_PAYMENT_KEY;
   const total = useSelector((state) => selectCartTotalPrice(state.cart));
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.user);
-  const totalAmount = total * 100;
 
   const onToken = (token) => {
     if (token) {
@@ -30,7 +29,7 @@ const CheckoutButton = () => {
           billingAddress
           shippingAddress
           description={`Your total is $ ${total.toFixed(2)}`}
-          amount={totalAmount}
+          amount={total * 100}
           panelLabel="Pay Now"
           token={onToken}
           stripeKey={publishableKey}
