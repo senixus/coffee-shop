@@ -18,7 +18,7 @@
 
 Clone this project
 
-`npm install` to install all required depencies
+`npm install` to install all required dependencies
 
 ## Firebase
 
