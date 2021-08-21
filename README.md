@@ -22,7 +22,7 @@ Clone this project
 
 ## Firebase
 
-Create a firebase file in src and set your firebase configuration.
+Set your firebase configuration in .env file.
 
 ## Start
 
