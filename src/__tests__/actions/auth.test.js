@@ -64,7 +64,7 @@ describe("auth", () => {
   it("should  registerAction ", () => {
     expect.assertions(1);
     const user = {
-      email: "senix@gmail.com", // it should return an error because this email adress is already registered
+      email: "senix@gmail.com",
       password: "123456",
       history: {
         push: function () {
