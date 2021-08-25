@@ -1,9 +1,15 @@
 import React from "react";
 import "./coffeeProducts.scss";
 import slide from "../../assets/images/slider-separator.png";
-import { Link, withRouter } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
-const CoffeeProducts = ({ history }) => {
+const CoffeeProducts = () => {
+  const history = useHistory();
+
+  const handleRoute = () => {
+    history.push("/shop");
+  };
+
   return (
     <header className="coffee-background">
       <div className="coffee-background__child">
@@ -15,10 +21,10 @@ const CoffeeProducts = ({ history }) => {
           since the 1500s, when an unknown printer took a galley of type and
           scrambled.
         </p>
-        <Link onClick={() => history.push("/shop")}>View more</Link>
+        <Link onClick={handleRoute}>View more</Link>
       </div>
     </header>
   );
 };
 
-export default withRouter(CoffeeProducts);
+export default CoffeeProducts;

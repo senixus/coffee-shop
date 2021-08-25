@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render ReactHelmet component 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <meta
+    charSet="utf-8"
+  />
+  <title>
+    Coffee
+     | Coffee Shop
+  </title>
+</HelmetWrapper>
+`;

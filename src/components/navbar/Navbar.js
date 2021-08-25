@@ -82,7 +82,7 @@ const Navbar = () => {
         <li className="navbar-nav__item cart">
           <Link to="/cart" className="navbar-nav__link ">
             <FaShoppingCart />
-            <span className="basket-count">{cart.length}</span>
+            <span className="basket-count">{cart?.length}</span>
           </Link>
 
           <div className="dropdown">

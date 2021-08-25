@@ -28,7 +28,7 @@ const CheckoutButton = () => {
           name="Coffee Shop"
           billingAddress
           shippingAddress
-          description={`Your total is $ ${total.toFixed(2)}`}
+          description={`Your total is $ ${total?.toFixed(2)}`}
           amount={total * 100}
           panelLabel="Pay Now"
           token={onToken}
