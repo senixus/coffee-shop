@@ -1,11 +1,11 @@
 import React from "react";
-import { shallow } from "enzyme";
+//import { shallow } from "enzyme";
 import Cart from "../../components/cart/Cart";
-import * as redux from "react-redux";
+//import * as redux from "react-redux";
 import { selectCartTotalPrice } from "../../redux/reducers/selectors/cartSelector";
-import * as actionTypes from "../../redux/actions/actionTypes";
+//import * as actionTypes from "../../redux/actions/actionTypes";
 import { mockStore } from "../../setupTests";
-import { removeItemFromCart } from "../../redux/actions/cart/removeFromCart";
+//import { removeItemFromCart } from "../../redux/actions/cart/removeFromCart";
 import renderer from "react-test-renderer";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
@@ -15,6 +15,7 @@ jest.mock("../../redux/reducers/selectors/cartSelector");
 // jest.mock("../../redux/actions/cart/removeFromCart.js", () => ({
 //   removeItemFromCart: jest.fn(),
 // }));
+console.log("Something");
 
 const cart = [
   {
@@ -32,9 +33,9 @@ const cart = [
 // };
 
 describe("Cart component", () => {
-  let spyOnUseSelector;
-  let spyOnUseDispatch;
-  let mockDispatch;
+  // let spyOnUseSelector;
+  // let spyOnUseDispatch;
+  // let mockDispatch;
   let store;
   let component;
   beforeEach(() => {
