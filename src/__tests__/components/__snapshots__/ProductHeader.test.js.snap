@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render ProductHeader component 1`] = `
+<header
+  className="product-header"
+>
+  <Navbar />
+  <div
+    className="product-header__child"
+  >
+    <h1>
+      Product Header
+    </h1>
+  </div>
+</header>
+`;

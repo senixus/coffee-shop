@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render Search component 1`] = `
+<div
+  className="search"
+>
+  <div>
+    <input
+      className="search-bar"
+      name="coffee"
+      onChange={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
+      placeholder="Search"
+      type="text"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render Contact component  1`] = `
+<main
+  className="contact"
+>
+  <Navbar />
+  <div
+    className="contact-content"
+  >
+    <form
+      action="https://formspree.io/f/xaylzaba"
+      className="contact-form"
+      method="POST"
+    >
+      <div
+        className="contact-form__group"
+      >
+        <label
+          htmlFor="name"
+        >
+          Name : 
+        </label>
+        <input
+          name="name"
+          placeholder="Name"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="contact-form__group"
+      >
+        <label
+          htmlFor="email"
+        >
+          Email : 
+        </label>
+        <input
+          name="email"
+          placeholder="Email"
+          required={true}
+          type="email"
+        />
+      </div>
+      <div
+        className="contact-form__group"
+      >
+        <label
+          htmlFor="message"
+        >
+          Message : 
+        </label>
+        <textarea
+          name="message"
+          placeholder="Message"
+          required={true}
+        />
+      </div>
+      <div
+        className="contact-form__group "
+      >
+        <button
+          type="submit"
+        >
+          Send
+        </button>
+      </div>
+    </form>
+  </div>
+</main>
+`;

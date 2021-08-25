@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render ImageSection component 1`] = `
+<section>
+  <div
+    className="title-section"
+  >
+    <h2>
+      The Coffee
+    </h2>
+    <img
+      alt="coffee seperator"
+      src="title-separator.png"
+    />
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    </p>
+  </div>
+  <div
+    className="coffee-section container"
+  >
+    <div
+      className="coffee-section__child"
+    >
+      <div
+        className="coffee-section__group"
+      >
+        <img
+          alt="coffee"
+          className="coffee-images"
+          src="1.jpg"
+        />
+        <h3>
+          Coffee
+        </h3>
+        <p
+          className="coffee-text"
+        >
+          Quisque rutrum, aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi, nam eget dui. Etiam rhoncus maecenas tempus,
+        </p>
+      </div>
+      <div
+        className="coffee-section__group"
+      >
+        <img
+          alt="coffee"
+          className="coffee-images"
+          src="2.jpg"
+        />
+        <h3>
+          Coffee
+        </h3>
+        <p
+          className="coffee-text"
+        >
+          Quisque rutrum, aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi, nam eget dui. Etiam rhoncus maecenas tempus,
+        </p>
+      </div>
+      <div
+        className="coffee-section__group"
+      >
+        <img
+          alt="coffee"
+          className="coffee-images"
+          src="3.jpg"
+        />
+        <h3>
+          Coffee
+        </h3>
+        <p
+          className="coffee-text"
+        >
+          Quisque rutrum, aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi, nam eget dui. Etiam rhoncus maecenas tempus,
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+`;

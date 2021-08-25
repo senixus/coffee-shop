@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render Filter component 1`] = `
+<div
+  className="filter"
+>
+  <select
+    onChange={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
+  >
+    <option>
+      Select
+    </option>
+    <option
+      value="name"
+    >
+      Name(A-Z)
+    </option>
+    <option
+      value="name reverse"
+    >
+      Name(Z-A)
+    </option>
+    <option
+      value="lowest price"
+    >
+      Lowest Price
+    </option>
+    <option
+      value="highest price"
+    >
+      Highest Price
+    </option>
+  </select>
+</div>
+`;

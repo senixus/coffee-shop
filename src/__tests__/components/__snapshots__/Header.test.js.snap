@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render Header component 1`] = `
+<header
+  className="background"
+>
+  <Navbar />
+  <div
+    className="background-child"
+  >
+    <h1>
+      Coffee Factory
+    </h1>
+    <img
+      alt="coffee"
+      src="slider-separator.png"
+    />
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.
+    </p>
+    <Link
+      to="/shop"
+    >
+      shop here
+    </Link>
+  </div>
+</header>
+`;
