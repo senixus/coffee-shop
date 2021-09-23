@@ -47,7 +47,7 @@ describe("auth", () => {
       });
   });
 
-  // This does not work currently
+
 
   // it("should return current user", () => {
   //   expect.assertions(1);
