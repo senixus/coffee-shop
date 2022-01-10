@@ -1,7 +1,9 @@
 import React from "react";
-import "./coffeeProducts.scss";
-import slide from "../../assets/images/slider-separator.png";
 import { Link, useHistory } from "react-router-dom";
+
+import "./coffeeProducts.scss";
+
+import slide from "../../assets/images/slider-separator.png";
 
 const CoffeeProducts = () => {
   const history = useHistory();

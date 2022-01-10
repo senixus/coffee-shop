@@ -1,6 +1,8 @@
 import React from "react";
-import "./productHeader.scss";
+
 import Navbar from "../navbar/Navbar";
+
+import "./productHeader.scss";
 
 const ProductHeader = ({ title }) => {
   return (

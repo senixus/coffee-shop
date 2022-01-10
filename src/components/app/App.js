@@ -1,7 +1,9 @@
-import { Route, Switch } from "react-router-dom";
 import React, { Suspense, lazy } from "react";
+import { Route, Switch } from "react-router-dom";
+
 import PrivateRoute from "../privateRoute/PrivateRoute";
 import Spinner from "../spinner/Spinner";
+
 const Home = lazy(() => import("../../pages/Home"));
 const Contact = lazy(() => import("../../pages/Contact"));
 const Shop = lazy(() => import("../../pages/Shop"));

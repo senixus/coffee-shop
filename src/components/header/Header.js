@@ -1,8 +1,11 @@
 import React from "react";
-import "./header.scss";
-import slide from "../../assets/images/slider-separator.png";
-import Navbar from "../navbar/Navbar";
 import { Link } from "react-router-dom";
+
+import Navbar from "../navbar/Navbar";
+
+import slide from "../../assets/images/slider-separator.png";
+
+import "./header.scss";
 
 const Header = () => {
   return (

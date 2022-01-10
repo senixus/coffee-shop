@@ -1,5 +1,6 @@
-import "./pagination.scss";
 import React from "react";
+
+import "./pagination.scss";
 
 const Pagination = ({ paginate, coffee }) => {
   const pageNumbers = [];

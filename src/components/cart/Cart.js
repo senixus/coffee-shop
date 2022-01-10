@@ -1,16 +1,18 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import ProductHeader from "../productHeader/ProductHeader";
-import "./cart.scss";
 import { IoMdClose } from "react-icons/io";
+
+import ProductHeader from "../productHeader/ProductHeader";
+import CheckoutButton from "../checkoutButton/CheckoutButton";
+
 import {
   removeItemFromCart,
   clearCartItems,
 } from "../../redux/actions/cart/removeFromCart";
-
 import { addToCart } from "../../redux/actions/cart/addToCart";
 import { selectCartTotalPrice } from "../../redux/reducers/selectors/cartSelector";
-import CheckoutButton from "../checkoutButton/CheckoutButton";
+
+import "./cart.scss";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart.cart);

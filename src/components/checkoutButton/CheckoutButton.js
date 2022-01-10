@@ -1,10 +1,11 @@
-import StripeCheckout from "react-stripe-checkout";
-import { selectCartTotalPrice } from "../../redux/reducers/selectors/cartSelector";
-import { useSelector, useDispatch } from "react-redux";
-import toast, { Toaster } from "react-hot-toast";
-import { clearCart } from "../../redux/actions/cart/removeFromCart";
-import { Link } from "react-router-dom";
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
+import StripeCheckout from "react-stripe-checkout";
+
+import { selectCartTotalPrice } from "../../redux/reducers/selectors/cartSelector";
+import { clearCart } from "../../redux/actions/cart/removeFromCart";
 
 const CheckoutButton = () => {
   const publishableKey = process.env.REACT_APP_PAYMENT_KEY;

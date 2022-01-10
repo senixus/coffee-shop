@@ -2,7 +2,7 @@
   "name": "coffee-shop",
   "version": "0.1.0",
   "private": true,
-  "jest" : {
+  "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ]

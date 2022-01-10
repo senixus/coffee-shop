@@ -1,18 +1,20 @@
-import "./navbar.scss";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaShoppingCart } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect, useState } from "react";
+import { FaBars, FaShoppingCart } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { FiLogOut, FiList } from "react-icons/fi";
+
 import { currentUserAction } from "../../redux/actions/auth/currentUser";
 import { logoutAction } from "../../redux/actions/auth/logout";
-import logo from "../../assets/images/coffee.png";
 import {
   selectCartTotalPrice,
   selectCart,
 } from "../../redux/reducers/selectors/cartSelector";
-import React from "react";
+
+import logo from "../../assets/images/coffee.png";
+
+import "./navbar.scss";
 
 const Navbar = () => {
   const dispatch = useDispatch();

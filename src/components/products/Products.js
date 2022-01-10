@@ -1,11 +1,14 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
-import { getAllCoffee } from "../../redux/actions/coffee/getAllCoffee";
-import "./products.scss";
 import { useDispatch, useSelector } from "react-redux";
+import toast, { Toaster } from "react-hot-toast";
+
 import Origins from "../origins/Origins";
 import Search from "../search/Search";
+import Pagination from "../pagination/Pagination";
+import Filter from "../filter/Filter";
 import ProductHeader from "../productHeader/ProductHeader";
+
 import {
   selectSearchCoffee,
   selectLowestPrice,
@@ -13,13 +16,14 @@ import {
   selectHighestPrice,
   selectReverseAlphabetic,
 } from "../../redux/reducers/selectors/coffeeSelectors";
-import toast, { Toaster } from "react-hot-toast";
-import Pagination from "../pagination/Pagination";
-import { handlePagination } from "../../helpers/pagination";
+import { getAllCoffee } from "../../redux/actions/coffee/getAllCoffee";
 import { searchCoffee } from "../../redux/actions/coffee/searchCoffee";
-import Filter from "../filter/Filter";
 import { addToCart } from "../../redux/actions/cart/addToCart";
 import { addToWishList } from "../../redux/actions/wishlist/wishlist";
+
+import { handlePagination } from "../../helpers/pagination";
+
+import "./products.scss";
 
 const Products = () => {
   const dispatch = useDispatch();

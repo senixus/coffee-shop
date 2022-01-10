@@ -1,9 +1,12 @@
-import "./auth.scss";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
+
 import { loginAction } from "../../redux/actions/auth/login";
+
 import Navbar from "../navbar/Navbar";
+
+import "./auth.scss";
 
 const Login = () => {
   const [user, setUser] = useState({ email: "", password: "" });

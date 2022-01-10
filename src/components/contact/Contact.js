@@ -1,5 +1,7 @@
 import React from "react";
+
 import Navbar from "../navbar/Navbar";
+
 import "./contact.scss";
 
 const Contact = () => {

@@ -1,8 +1,10 @@
-import "./origins.scss";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import { getOrigins } from "../../redux/actions/origins/getOrigins";
 import { getCoffeeByOriginId } from "../../redux/actions/coffee/getCoffeeByOriginId";
+
+import "./origins.scss";
 
 const Origins = () => {
   const dispatch = useDispatch();
