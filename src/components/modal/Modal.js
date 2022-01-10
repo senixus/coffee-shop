@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef, useImperativeHandle, useState } from "react";
 import ReactDOM from "react-dom";
 import "./modal.scss";
 import { AiOutlineClose } from "react-icons/ai";
@@ -7,16 +7,34 @@ import { deleteItemFromWishList } from "../../redux/actions/wishlist/deleteItemF
 import { addToCart } from "../../redux/actions/cart/addToCart";
 import toast, { Toaster } from "react-hot-toast";
 
-const Modal = ({ id, open, closeModal, coffee }) => {
+const Modal = ({}, ref) => {
   const dispatch = useDispatch();
   const deleteItem = (id) => dispatch(deleteItemFromWishList(id));
   const addCart = (coffee) => dispatch(addToCart(coffee));
 
-  if (!open) return null;
+  const [isOpen, setIsOpen] = useState(false);
+  const [coffee, setCoffee] = useState({});
+  const [id, setId] = useState("");
+
+  const openModal = (coffee, id) => {
+    setIsOpen(true);
+    setCoffee(coffee);
+    setId(id);
+  };
+
+  useImperativeHandle(ref, () => ({
+    openModal,
+  }));
+
+  if (!isOpen) return null;
 
   const handleCart = (coffee) => {
     addCart(coffee);
     toast.success(`${coffee.coffeeName} added to cart`);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
   };
 
   const handleWishList = (id) => {
@@ -63,4 +81,4 @@ const Modal = ({ id, open, closeModal, coffee }) => {
   );
 };
 
-export default Modal;
+export default forwardRef(Modal);

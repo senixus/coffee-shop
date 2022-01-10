@@ -1,44 +1,41 @@
-import React, { useEffect, useState } from "react";
-import "./wishlist.scss";
-import ProductHeader from "../productHeader/ProductHeader";
+import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getWishList } from "../../redux/actions/wishlist/getWishlist";
+
+import ProductHeader from "../productHeader/ProductHeader";
 import Modal from "../modal/Modal";
+
+import { getWishList } from "../../redux/actions/wishlist/getWishlist";
+
+import "./wishlist.scss";
 
 const Wishlist = () => {
   const dispatch = useDispatch();
   const getUserWishList = (user) => dispatch(getWishList(user));
+
   const wishList = useSelector((state) => state.wishList.wishList);
-  const [isOpen, setIsOpen] = useState(false);
-  const [coffee, setCoffee] = useState({});
-  const [id, setId] = useState("");
   const user = useSelector((state) => state.auth.user);
+
+  const ModalRef = useRef(null);
 
   useEffect(() => {
     getUserWishList(user.uid);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user.uid]);
 
-  const openModal = (coffee, id) => {
-    setIsOpen(true);
-    setCoffee(coffee);
-    setId(id);
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
-  };
-
   return (
     <React.Fragment>
       <ProductHeader title="Wish List" />
-      <Modal id={id} open={isOpen} closeModal={closeModal} coffee={coffee} />
+      <Modal ref={ModalRef} />
       <main className="wishlist container">
         <div className="wishlist">
           {wishList &&
             wishList.map((wish) => (
               <div key={wish.id} className="wishlist-child">
-                <button onClick={() => openModal(wish.coffee, wish.id)}>
+                <button
+                  onClick={() =>
+                    ModalRef.current.openModal(wish.coffee, wish.id)
+                  }
+                >
                   <img
                     src={wish.coffee.coffeePic && wish.coffee.coffeePic.name}
                     width="250px"
