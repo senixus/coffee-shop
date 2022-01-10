@@ -1,11 +1,13 @@
 import React, { forwardRef, useImperativeHandle, useState } from "react";
 import ReactDOM from "react-dom";
-import "./modal.scss";
-import { AiOutlineClose } from "react-icons/ai";
 import { useDispatch } from "react-redux";
+import toast, { Toaster } from "react-hot-toast";
+import { AiOutlineClose } from "react-icons/ai";
+
 import { deleteItemFromWishList } from "../../redux/actions/wishlist/deleteItemFromWishList";
 import { addToCart } from "../../redux/actions/cart/addToCart";
-import toast, { Toaster } from "react-hot-toast";
+
+import "./modal.scss";
 
 const Modal = ({}, ref) => {
   const dispatch = useDispatch();
