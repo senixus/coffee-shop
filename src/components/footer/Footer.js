@@ -6,7 +6,7 @@ import "./footer.scss";
 const Footer = () => {
   return (
     <footer>
-      <div>&copy; 2021 All rights reserved</div>
+      <div>&copy; {new Date().getFullYear()} All rights reserved</div>
       <ul>
         <li>
           <Link to="/">Home</Link>
